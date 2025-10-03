@@ -2,11 +2,10 @@ ACORDO DE LICENÇA DE USUÁRIO FINAL (EULA)
 
 EgoBrain-Dev - Plataforma Oficial de Serviços e Licenças
 
-Software / Sistema: EgoBrain-Dev Licensing & Commerce Platform
-Versão: 2.0
+Plataforma: EgoBrain-Dev Licensing & Commerce Platform
+Versão: 1.0
 Data de Vigência: 2025
 
----
 
 1. OBJETIVO E CONCESSÃO DE USO
 
@@ -16,7 +15,6 @@ A EgoBrain-Dev concede ao Usuário o direito não exclusivo, intransferível e l
 
 ⚠️ AVISO IMPORTANTE: O uso da plataforma é restrito a finalidades legítimas e em conformidade com as leis aplicáveis de Moçambique.
 
----
 
 2. DIREITOS DO USUÁRIO
 
@@ -33,7 +31,6 @@ O Usuário pode:
 
 O painel administrativo é de uso exclusivo da EgoBrain-Dev e de seus administradores autorizados. Nenhum usuário final, cliente ou revendedor tem permissão de acesso administrativo sem autorização formal e documentada.
 
----
 
 3. RESTRIÇÕES DO USUÁRIO
 
@@ -48,7 +45,6 @@ O Usuário NÃO poderá:
 · 👥 Partilhar credenciais de acesso com terceiros
 · 🚫 Utilizar a plataforma para criar sistemas concorrentes ou similares
 
----
 
 4. LICENÇAS, PRODUTOS E SERVIÇOS
 
@@ -66,7 +62,6 @@ O Usuário NÃO poderá:
 · Uso da marca EgoBrain-Dev sujeito a diretrizes de identidade visual
 · Relatórios de vendas devem ser prestados mensalmente
 
----
 
 5. PROPRIEDADE INTELECTUAL
 
@@ -81,7 +76,6 @@ O Usuário reconhece que a EgoBrain-Dev detém todos os direitos sobre:
 
 📌 IMPORTANTE: Nenhum direito de propriedade é transferido ao usuário. O acesso à plataforma constitui mera permissão de uso controlado e supervisionado.
 
----
 
 6. GARANTIAS E ISENÇÕES
 
@@ -97,7 +91,6 @@ A plataforma é fornecida "NO ESTADO EM QUE SE ENCONTRA", sem garantias de:
 
 O Licenciante não será responsável por quaisquer danos indiretos, incidentais, consequenciais ou lucros cessantes resultantes do uso ou da impossibilidade de uso da plataforma, mesmo que tenha sido alertado sobre tal possibilidade.
 
----
 
 7. SUPORTE E ATENDIMENTO
 
@@ -112,9 +105,8 @@ O Licenciante não será responsável por quaisquer danos indiretos, incidentais
 · ⏰ Tempo médio de resposta: Até 48 horas úteis
 · 🛠️ Suporte técnico: Conforme plano ou categoria do utilizador
 · 🔒 Atualizações de segurança: Aplicadas automaticamente
-· 📅 Horário comercial: Segunda a Sexta, 08h00 - 17h00
+· 📅 Horário comercial: Segunda a Sexta, 08h00 - 17h00, Domingos e Feriados: Atendimento por email.
 
----
 
 8. RESCISÃO E SUSPENSÃO DE CONTA
 
@@ -129,7 +121,6 @@ O Licenciante poderá encerrar ou suspender o acesso caso:
 
 Após a rescisão, o acesso à conta será bloqueado imediatamente e os dados poderão ser removidos conforme a Política de Privacidade. Licenças ativas poderão ser revogadas sem reembolso.
 
----
 
 9. PRIVACIDADE E DADOS PESSOAIS
 
@@ -145,7 +136,6 @@ Após a rescisão, o acesso à conta será bloqueado imediatamente e os dados po
 · Não compartilhamento com terceiros não autorizados
 · Backup regular dos dados dos usuários
 
----
 
 10. LEI APLICÁVEL E JURISDIÇÃO
 
@@ -160,7 +150,6 @@ Após a rescisão, o acesso à conta será bloqueado imediatamente e os dados po
 · Mediação como etapa prévia ao litígio judicial
 · Prazo de 30 dias para tentativa de acordo extrajudicial
 
----
 
 11. ALTERAÇÕES DO ACORDO
 
@@ -176,7 +165,6 @@ Após a rescisão, o acesso à conta será bloqueado imediatamente e os dados po
 · Utilizadores devem revisar periodicamente os termos
 · Versão atual sempre disponível no site oficial
 
----
 
 12. ACEITAÇÃO DOS TERMOS
 
@@ -192,7 +180,6 @@ Ao aceder e utilizar o site oficial da EgoBrain-Dev, o Usuário reconhece e acei
 
 ⚠️ AVISO LEGAL: O uso contínuo do sistema constitui aceitação tácita e integral destes termos. O usuário é responsável por manter-se informado sobre atualizações.
 
----
 
 📡 CANAIS OFICIAIS E CONTACTOS
 
@@ -214,17 +201,15 @@ Ao aceder e utilizar o site oficial da EgoBrain-Dev, o Usuário reconhece e acei
 · Sábados: 09h00 - 12h00
 · Domingos e Feriados: Atendimento por email
 
----
 
 🏢 EgoBrain-Dev
 
 Soluções, Licenças & Consultoria Tecnológica
 Desenvolvendo o Futuro Digital de Moçambique
 
----
 
-📄 Documento: EULA-2.0
+📄 Documento: EULA-1.0
 🔄 Última atualização: 2025
-🔒 Versão: 2.0 - Vigente
+🔒 Versão: 1.0 - Vigente
 
 Este documento é propriedade intelectual da EgoBrain-Dev. Qualquer reprodução não autorizada é expressamente proibida.
