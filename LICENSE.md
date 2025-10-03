@@ -98,7 +98,7 @@ O Licenciante não será responsável por quaisquer danos indiretos, incidentais
 
 · 📧 Email: egobrain.mz@gmail.com
 · 📱 WhatsApp: +258 84 361 7130
-· 🌐 Site: www.egobrain-dev.com
+· 🌐 Site: https://egobrain-dev.vercel.app/
 
 7.2. PRAZOS E DISPONIBILIDADE
 
@@ -185,7 +185,7 @@ Ao aceder e utilizar o site oficial da EgoBrain-Dev, o Usuário reconhece e acei
 
 🌐 PLATAFORMAS OFICIAIS:
 
-· Site Oficial: www.egobrain-dev.com
+· Site Oficial: https://egobrain-dev.vercel.app/
 · GitHub: github.com/EgoBrain-Dev
 · YouTube: youtube.com/@egobrain-1jm
 
