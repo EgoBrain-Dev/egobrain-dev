@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>EgoBrain-Dev — Soluções & Licenças</title>
+    <link rel="icon" href="assets/images/logo.jpeg" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="wrap">
+        <div class="brand">
+            <div class="logo"><img src="assets/images/logo.jpeg" alt="EgoBrain-Dev logo" /></div>
+            <div class="brand-title">
+                <div class="name">EgoBrain-Dev</div>
+                <div class="tag small">Soluções, Licenças & Consultoria</div>
+            </div>
+        </div>
+
+        <nav aria-label="Main navigation" id="mainNav">
+            <a href="#home">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contacto</a>
+            <a id="admin-link" href="#" title="Painel Admin">Admin</a>
+            <a id="dashboard-link" href="#" title="Dashboard" style="display:none">Dashboard</a>
+        </nav>
+
+        <div style="display:flex;align-items:center;gap:10px">
+            <button class="theme-toggle" id="themeToggle" title="Mudar tema">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <a class="cta" href="#produtos">Comprar Licença</a>
+            <div class="hamb" id="hamb"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-grid">
+        <div>
+            <span class="kicker">Empresa de desenvolvimento</span>
+            <h1>Software & Licenças profissionais para negócios inteligentes</h1>
+            <p class="lead">Somos a EgoBrain-Dev. Criamos software de gestão, aplicações sob medida e vendemos licenças com suporte. Compra uma licença e recebe a chave imediatamente.</p>
+
+            <div class="hero-cta">
+                <button class="btn primary" onclick="scrollToSection('produtos')">Ver Licenças</button>
+                <button class="btn ghost" onclick="scrollToSection('contato')">Falar com Vendas</button>
+                <button class="btn success" onclick="showWishlist()"><i class="fa-solid fa-heart"></i> Favoritos</button>
+            </div>
+
+            <div class="features" style="margin-top:14px">
+                <div class="feature"><i class="fa-solid fa-shield-check"></i><div>Suporte 1 ano</div></div>
+                <div class="feature"><i class="fa-solid fa-gear"></i><div>Instalação & integração</div></div>
+                <div class="feature"><i class="fa-solid fa-file-lines"></i><div>EULA & Documentação</div></div>
+                <div class="feature"><i class="fa-solid fa-gift"></i><div>Sistema de pontos</div></div>
+            </div>
+            
+            <!-- Gamification Progress -->
+            <div class="glass-card" style="margin-top:20px;">
+                <div style="display:flex;justify-content:space-between;">
+                    <div>Seus pontos: <strong id="userPoints">0</strong></div>
+                    <div>Próximo nível: <strong id="nextLevel">100</strong></div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="levelProgress" style="width:0%"></div>
+                </div>
+                <div class="badge-collection">
+                    <div class="badge-item" title="Primeira compra"><i class="fa-solid fa-star"></i></div>
+                    <div class="badge-item" title="Cliente fiel" style="border-color:var(--muted);"><i class="fa-solid fa-crown"></i></div>
+                    <div class="badge-item" title="Comprador frequente" style="border-color:var(--muted);"><i class="fa-solid fa-bolt"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <aside>
+            <div class="glass-card fadeIn">
+                <strong style="display:block;font-size:15px;margin-bottom:6px">Destaque</strong>
+                <div style="display:flex;gap:12px;align-items:center">
+                    <div style="flex:1">
+                        <div style="font-weight:700;color:var(--accent)">GestCom Pro</div>
+                        <div class="small muted">Licença anual para pequenas e médias empresas</div>
+                        <div style="margin-top:10px;font-size:18px;font-weight:800">MZN 6.200</div>
+                        <div style="margin-top:12px;display:flex;gap:8px">
+                            <button class="btn primary" onclick="addToCartById('G-PRO')">Comprar</button>
+                            <button class="btn ghost" onclick="showProduct('G-PRO')">Ver</button>
+                            <button class="btn ghost" onclick="toggleWishlist('G-PRO')"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div style="width:86px;height:86px;border-radius:12px;background:linear-gradient(180deg,color-mix(in srgb, var(--accent) 10%, transparent),color-mix(in srgb, var(--accent) 5%, transparent));display:flex;align-items:center;justify-content:center">
+                        <i class="fa-solid fa-cubes" style="font-size:28px;color:var(--accent)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height:14px"></div>
+
+            <div class="glass-card small muted">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                    <div>Contatos</div>
+                    <div style="text-align:right">
+                        <div><a href="https://wa.me/258843617130" target="_blank" style="color:var(--accent)">WhatsApp</a></div>
+                        <div><a href="mailto:egobrain.mz@gmail.com" style="color:var(--accent)">egobrain.mz@gmail.com</a></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<!-- DASHBOARD (Hidden by default) -->
+<section class="dashboard" id="dashboard">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>Painel Administrativo</h2>
+            <button class="btn error" onclick="logoutAdmin()">Sair</button>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="totalSales">MZN 0.00</div>
+                <div class="stat-label">Total de Vendas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalLicenses">0</div>
+                <div class="stat-label">Licenças Vendidas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="avgTicket">MZN 0.00</div>
+                <div class="stat-label">Ticket Médio</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalCustomers">0</div>
+                <div class="stat-label">Clientes</div>
+            </div>
+        </div>
+        
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('orders')">Pedidos</div>
+            <div class="tab" onclick="switchTab('customers')">Clientes</div>
+            <div class="tab" onclick="switchTab('products')">Produtos</div>
+            <div class="tab" onclick="switchTab('licenses')">Licenças</div>
+            <div class="tab" onclick="switchTab('reports')">Relatórios</div>
+        </div>
+        
+        <div id="tab-orders" class="tab-content">
+            <div style="display:flex;gap:12px;margin-bottom:16px;">
+                <input class="search" id="orderSearch" placeholder="Pesquisar pedidos..." />
+                <select class="select" id="orderFilter">
+                    <option value="">Todos os status</option>
+                    <option value="paid">Pagos</option>
+                    <option value="pending">Pendentes</option>
+                </select>
+                <button class="btn primary" onclick="exportOrders()">Exportar CSV</button>
+            </div>
+            <div class="table-container" style="overflow-x:auto;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Produtos</th>
+                            <th>Total</th>
+                            <th>Data</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersTable">
+                        <!-- Orders will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div id="tab-customers" class="tab-content" style="display:none;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Pedidos</th>
+                        <th>Total Gasto</th>
+                        <th>Última Compra</th>
+                    </tr>
+                </thead>
+                <tbody id="customersTable">
+                    <!-- Customers will be populated here -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="tab-products" class="tab-content" style="display:none;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:16px;">
+                <h3>Gestão de Produtos</h3>
+                <button class="btn primary" onclick="showProductModal()">Adicionar Produto</button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Tipo</th>
+                        <th>Vendas</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="productsTable">
+                    <!-- Products will be populated here -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="tab-licenses" class="tab-content" style="display:none;">
+            <div style="display:flex;gap:12px;margin-bottom:16px;">
+                <input class="search" id="licenseSearch" placeholder="Pesquisar licenças..." />
+                <select class="select" id="licenseFilter">
+                    <option value="">Todas</option>
+                    <option value="active">Ativas</option>
+                    <option value="expired">Expiradas</option>
+                </select>
+                <button class="btn primary" onclick="generateLicenseManual()">Gerar Licença</button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Chave</th>
+                        <th>Produto</th>
+                        <th>Cliente</th>
+                        <th>Validade</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="licensesTable">
+                    <!-- Licenses will be populated here -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="tab-reports" class="tab-content" style="display:none;">
+            <div class="grid-2">
+                <div class="glass-card">
+                    <h3>Vendas Mensais</h3>
+                    <div id="salesChart" style="height:200px;display:flex;align-items:end;gap:4px;margin-top:16px;">
+                        <!-- Chart bars will be generated here -->
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <h3>Produtos Mais Vendidos</h3>
+                    <div id="productsChart">
+                        <!-- Products chart will be generated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MAIN -->
+<main id="mainContent">
+    <!-- PRODUTOS / LOJA -->
+    <section id="produtos">
+        <div class="section-head">
+            <h2>Loja — Licenças</h2>
+            <div class="filters">
+                <input class="search" id="search" placeholder="Pesquisar licença..." />
+                <select class="select" id="filter-type">
+                    <option value="">Todos os tipos</option>
+                    <option value="annual">Anual</option>
+                    <option value="perpetual">Perpétua</option>
+                    <option value="custom">Personalizada</option>
+                </select>
+                <select class="select" id="sort-by">
+                    <option value="popular">Mais populares</option>
+                    <option value="price-asc">Preço: baixo → alto</option>
+                    <option value="price-desc">Preço: alto → baixo</option>
+                    <option value="name">Nome A-Z</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid" id="productGrid"></div>
+
+        <div style="margin-top:18px;text-align:center;color:var(--muted)">
+            <small>Venda de licenças digitais — chave entregue imediatamente após o pagamento (simulado).</small>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+        <div class="section-head"><h2>Serviços Profissionais</h2></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+            <div class="glass-card">
+                <h3 style="color:var(--accent)">Desenvolvimento Sob Medida</h3>
+                <p class="muted">Aplicações web, desktop e mobile adaptadas às tuas necessidades.</p>
+            </div>
+            <div class="glass-card">
+                <h3 style="color:var(--accent)">Integrações & Migração</h3>
+                <p class="muted">Integramos com ERPs, PDVs e realizamos migração de dados segura.</p>
+            </div>
+            <div class="glass-card">
+                <h3 style="color:var(--accent)">Suporte & Treinamento</h3>
+                <p class="muted">Planos de suporte e formação para equipas.</p>
+            </div>
+            <div class="glass-card">
+                <h3 style="color:var(--accent)">Consultoria Técnica</h3>
+                <p class="muted">Análise e optimização de processos e sistemas existentes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <div class="section-head"><h2>Sobre a EgoBrain-Dev</h2></div>
+        <p class="muted">A EgoBrain-Dev é uma equipa de desenvolvimento focada em entregar soluções escaláveis, seguras e fáceis de usar. Fornecemos licenças de software, integração, manutenção e consultoria de processos.</p>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+        <div class="section-head"><h2>Contacto</h2></div>
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:22px">
+            <div>
+                <form id="contactForm" class="glass-card" onsubmit="handleContact(event)">
+                    <div style="font-weight:700;margin-bottom:6px">Fale connosco</div>
+                    <div class="form-row">
+                        <label class="muted">Nome</label>
+                        <input id="cname" required />
+                    </div>
+                    <div class="form-row">
+                        <label class="muted">Email</label>
+                        <input id="cemail" type="email" required />
+                    </div>
+                    <div class="form-row">
+                        <label class="muted">Mensagem</label>
+                        <textarea id="cmsg" required></textarea>
+                    </div>
+                    <div style="display:flex;gap:10px;justify-content:flex-end">
+                        <button class="btn ghost" type="reset">Limpar</button>
+                        <button class="btn primary" type="submit">Enviar Mensagem</button>
+                    </div>
+                </form>
+            </div>
+
+            <aside>
+                <div class="glass-card">
+                    <h4 style="margin-bottom:8px">Informações</h4>
+                    <div class="small muted">WhatsApp: <a href="https://wa.me/258843617130" target="_blank" style="color:var(--accent)">84 361 7130</a></div>
+                    <div class="small muted">Telefone: 87 861 7130</div>
+                    <div class="small muted">Email: <a href="mailto:egobrain.mz@gmail.com" style="color:var(--accent)">egobrain.mz@gmail.com</a></div>
+                    <div style="height:8px"></div>
+                    <div style="display:flex;gap:8px">
+                        <a class="btn ghost" href="https://github.com/EgoBrain-Dev" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;Github</a>
+                        <a class="btn ghost" href="https://www.youtube.com/@EgoBrain-j1m" target="_blank"><i class="fa-brands fa-youtube"></i>&nbsp;YouTube</a>
+                    </div>
+                </div>
+
+                <div style="height:12px"></div>
+
+                <div class="glass-card small muted">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <div>Newsletter</div>
+                        <div><button class="btn primary" onclick="subscribeDemo()">Inscrever</button></div>
+                    </div>
+                    <div style="margin-top:8px;color:var(--muted)">Receba novidades sobre lançamentos e promoções.</div>
+                </div>
+            </aside>
+        </div>
+    </section>
+</main>
+
+<!-- CART BUTTON -->
+<button class="cart-btn" id="cartBtn" title="Ver carrinho">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cartCount">0</span>
+</button>
+
+<!-- CART PANEL (hidden by default) -->
+<div class="cart-panel" id="cartPanel" style="display:none">
+    <div class="cart-box">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-weight:800">Carrinho</div>
+            <div class="small muted" id="cartTotalText">Total: MZN 0.00</div>
+        </div>
+        <div id="cartItems"></div>
+        <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end">
+            <button class="btn ghost" onclick="clearCart()">Esvaziar</button>
+            <button class="btn primary" onclick="openCheckout()">Finalizar</button>
+        </div>
+    </div>
+</div>
+
+<!-- WISHLIST PANEL -->
+<div class="cart-panel" id="wishlistPanel" style="display:none">
+    <div class="cart-box">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-weight:800">Favoritos</div>
+            <button class="btn ghost" onclick="hideWishlist()">Fechar</button>
+        </div>
+        <div id="wishlistItems"></div>
+    </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div id="checkoutModal" style="display:none" class="modal-back" aria-hidden="true">
+    <div class="modal">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-weight:800">Checkout</div>
+            <div><button class="btn ghost" onclick="closeCheckout()">Fechar</button></div>
+        </div>
+
+        <div class="grid-2">
+            <div>
+                <div class="muted" style="margin-bottom:8px">Preencha os dados para emissão das licenças (simulado)</div>
+                <div class="form-row">
+                    <label class="muted">Nome</label><input id="buyerName" required />
+                </div>
+                <div class="form-row">
+                    <label class="muted">Email</label><input id="buyerEmail" type="email" required />
+                </div>
+                <div class="form-row">
+                    <label class="muted">Documento / Empresa (opcional)</label><input id="buyerOrg" />
+                </div>
+                <div class="form-row">
+                    <label class="muted">Descrição para a licença (opcional)</label>
+                    <textarea id="licenseDescription" placeholder="Descreva o uso pretendido para esta licença..."></textarea>
+                </div>
+
+                <div style="margin-top:12px;display:flex;gap:10px;justify-content:flex-end">
+                    <button class="btn ghost" onclick="closeCheckout()">Cancelar</button>
+                    <button class="btn primary" onclick="processPayment()">Pagar (Simulado)</button>
+                </div>
+            </div>
+
+            <aside>
+                <div style="font-weight:700;margin-bottom:8px">Resumo</div>
+                <div id="checkoutList" class="small muted"></div>
+                <div style="height:14px"></div>
+                <div style="font-weight:800" id="checkoutTotal">Total: MZN 0.00</div>
+                <div class="muted small" style="margin-top:8px">
+                    <i class="fa-solid fa-coins"></i> Ganhe <strong id="pointsEarned">0</strong> pontos com esta compra!
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
+
+<!-- ADMIN PANEL (basic, protected) -->
+<div id="adminModal" style="display:none" class="modal-back">
+    <div class="modal">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-weight:800">Painel Admin</div>
+            <div><button class="btn ghost" onclick="closeAdmin()">Fechar</button></div>
+        </div>
+
+        <div style="margin-bottom:12px">
+            <label class="muted">Senha:</label>
+            <input id="adminPass" type="password" />
+            <button class="btn primary" style="margin-left:8px" onclick="openAdmin()">Entrar</button>
+        </div>
+
+        <div id="ordersList" class="small muted"></div>
+    </div>
+</div>
+
+<!-- PRODUCT MANAGEMENT MODAL -->
+<div id="productModal" style="display:none" class="modal-back">
+    <div class="modal">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-weight:800">Gestão de Produto</div>
+            <div><button class="btn ghost" onclick="closeProductModal()">Fechar</button></div>
+        </div>
+        
+        <form onsubmit="saveProduct(event)">
+            <input type="hidden" id="editProductId">
+            <div class="form-row">
+                <label class="muted">Nome do Produto</label>
+                <input id="productName" required>
+            </div>
+            <div class="form-row">
+                <label class="muted">ID do Produto</label>
+                <input id="productId" required>
+            </div>
+            <div class="form-row">
+                <label class="muted">Preço (MZN)</label>
+                <input id="productPrice" type="number" step="0.01" required>
+            </div>
+            <div class="form-row">
+                <label class="muted">Tipo</label>
+                <select id="productType" required>
+                    <option value="annual">Anual</option>
+                    <option value="perpetual">Perpétua</option>
+                    <option value="custom">Personalizada</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label class="muted">Descrição</label>
+                <textarea id="productDesc" required></textarea>
+            </div>
+            <div class="form-row">
+                <label class="muted">Características (separadas por vírgula)</label>
+                <input id="productFeatures" placeholder="Recurso 1, Recurso 2, Recurso 3">
+            </div>
+            
+            <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:16px">
+                <button class="btn ghost" type="button" onclick="closeProductModal()">Cancelar</button>
+                <button class="btn primary" type="submit">Salvar Produto</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- LICENSE GENERATION MODAL -->
+<div id="licenseModal" style="display:none" class="modal-back">
+    <div class="modal">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-weight:800">Gerar Licença Manual</div>
+            <div><button class="btn ghost" onclick="closeLicenseModal()">Fechar</button></div>
+        </div>
+        
+        <form onsubmit="generateManualLicense(event)">
+            <div class="form-row">
+                <label class="muted">Produto</label>
+                <select id="manualProductId" required>
+                    <!-- Options will be populated -->
+                </select>
+            </div>
+            <div class="form-row">
+                <label class="muted">Cliente</label>
+                <input id="manualCustomer" required>
+            </div>
+            <div class="form-row">
+                <label class="muted">Email do Cliente</label>
+                <input id="manualEmail" type="email" required>
+            </div>
+            <div class="form-row">
+                <label class="muted">Validade (dias)</label>
+                <input id="manualValidity" type="number" value="365">
+            </div>
+            
+            <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:16px">
+                <button class="btn ghost" type="button" onclick="closeLicenseModal()">Cancelar</button>
+                <button class="btn primary" type="submit">Gerar Licença</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 EgoBrain-Dev • <a href="#sobre">Sobre</a> • <a href="#contato">Contacte</a>
+    <div style="margin-top:8px;color:var(--muted)">E-mail: <a href="mailto:egobrain.mz@gmail.com">egobrain.mz@gmail.com</a> • WhatsApp: <a href="https://wa.me/258843617130" target="_blank">84 361 7130</a></div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
