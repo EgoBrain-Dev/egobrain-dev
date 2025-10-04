@@ -1,27 +1,13 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "frontend/pages/**/*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "backend/requirements.txt",
-      "use": "@vercel/python"
-    }
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "frontend/assets/**/*", "use": "@vercel/static" },
+    { "src": "backend/requirements.txt", "use": "@vercel/python" }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/backend/app.py"
-    },
-    {
-      "src": "/assets/(.*)",
-      "dest": "/frontend/assets/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/pages/$1"
-    }
+    { "src": "/api/(.*)", "dest": "/backend/app.py" },
+    { "src": "/assets/(.*)", "dest": "/frontend/assets/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
