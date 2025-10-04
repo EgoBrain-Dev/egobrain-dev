@@ -1,8 +1,14 @@
 {
   "version": 2,
   "builds": [
-    { "src": "frontend/pages/**/*.html", "use": "@vercel/static" },
-    { "src": "backend/requirements.txt", "use": "@vercel/python" }
+    {
+      "src": "frontend/pages/**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "backend/requirements.txt",
+      "use": "@vercel/python"
+    }
   ],
   "routes": [
     {
@@ -10,8 +16,12 @@
       "dest": "/backend/app.py"
     },
     {
+      "src": "/assets/(.*)",
+      "dest": "/frontend/assets/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/frontend/pages/index.html"
+      "dest": "/frontend/pages/$1"
     }
   ]
 }
